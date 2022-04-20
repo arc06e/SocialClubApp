@@ -5,12 +5,11 @@ namespace SocialClubApp.Models
 {
     public class AppUser : IdentityUser
     {
-        [PersonalData]
+
         [Column(TypeName = "nvarchar(100)")]
-        public string FirstName { get; set; }
-        [PersonalData]
+        public string? FirstName { get; set; }
         [Column(TypeName = "nvarchar(100)")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
         //    public string? ProfileImageUrl { get; set; }
         public string? Street { get; set; }
         public string? City { get; set; }
