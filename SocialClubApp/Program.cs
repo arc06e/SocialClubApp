@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SocialClubApp.DAL;
+using SocialClubApp.Interfaces;
 using SocialClubApp.Models;
+using SocialClubApp.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IClubRepository, ClubRepository>();
 
 //registers dependency with dependency injection container
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
