@@ -24,6 +24,13 @@ builder.Services.AddIdentity<AppUser, IdentityRole>()
     //.AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider);
 builder.Services.AddAuthentication();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("DeleteRolePolicy",
+        policy => policy.RequireClaim("Delete Role"));
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

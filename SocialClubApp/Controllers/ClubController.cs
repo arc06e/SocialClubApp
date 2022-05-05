@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SocialClubApp.Interfaces;
 using SocialClubApp.Models;
 
@@ -6,6 +7,7 @@ using SocialClubApp.ViewModels;
 
 namespace SocialClubApp.Controllers
 {
+    [Authorize]
     public class ClubController : Controller
     {
         private readonly IClubRepository _clubRepository;
@@ -16,7 +18,7 @@ namespace SocialClubApp.Controllers
             _clubRepository = clubRepository;
             _httpContextAccessor = httpContextAccessor;
         }
-        
+
         public async Task<IActionResult> Index()
         {
             IEnumerable<Club> clubs = await _clubRepository.GetAll();
