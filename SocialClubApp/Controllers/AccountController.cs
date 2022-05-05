@@ -47,6 +47,14 @@ namespace SocialClubApp.Controllers
 
                 if (result.Succeeded)
                 {
+                    // If the user is signed in and in the Admin role, then it is
+                    // the Admin user that is creating a new user. So redirect the
+                    // Admin user to ListRoles action
+                    if (_signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        return RedirectToAction("ListUsers", "Administration");
+                    }
+
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Club");
                 }
@@ -67,7 +75,7 @@ namespace SocialClubApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginVM) 
+        public async Task<IActionResult> Login(LoginViewModel loginVM, string returnUrl) 
         {
             if (ModelState.IsValid) 
             {
@@ -75,7 +83,16 @@ namespace SocialClubApp.Controllers
                     loginVM.Password, loginVM.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Club");
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    else 
+                    {
+                        return RedirectToAction("Index", "Club");
+                    }
+
+                    
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid login attempt");
@@ -83,6 +100,11 @@ namespace SocialClubApp.Controllers
 
             return View(loginVM);
 
+        }
+
+        public IActionResult AccessDenied() 
+        {
+            return View();
         }
 
         [HttpPost]
