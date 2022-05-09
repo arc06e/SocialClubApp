@@ -75,7 +75,8 @@ namespace SocialClubApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginVM, string returnUrl) 
+        
+        public async Task<IActionResult> Login(LoginViewModel loginVM, string? returnUrl) 
         {
             if (ModelState.IsValid) 
             {

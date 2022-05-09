@@ -1,8 +1,8 @@
 ﻿@using SocialClubApp.DAL.Enum
 @using SocialClubApp.ViewModels
-@model CreateClubViewModel
+@model EditMeetingViewModel
 
-    <div class="container h-100">
+<div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -11,10 +11,10 @@
 
             <div class="card-body p-5">
 
-              <h2 class="text-center mb-5">Create Club</h2>
+              <h2 class="text-center mb-5">Edit Event</h2>
 
-              <form method="post" enctype="multipart/form-data">
-               <input type="hidden" id="AppUserId" name="AppUserId" asp-for="AppUserId" />
+              <form method="post" asp-action="Edit" enctype="multipart/form-data">
+               <input type="hidden" id="Id" name="Id" asp-for="Id" />
                 <div asp-validation-summary="All" class="text-danger"></div>
                  <div class="form-outline mb-4">
                    <input asp-for="Title"class="form-control form-control-lg" />
@@ -36,11 +36,11 @@
               </div>
 
               <div class="form-outline mb-4">
-                <select asp-for="ClubCategory" asp-items="@Html.GetEnumSelectList<ClubCategory>()" class="form-control form-control-lg">
+                <select asp-for="MeetingCategory" asp-items="@Html.GetEnumSelectList<MeetingCategory>()" class="form-control form-control-lg">
                    <option>--Select--</option>
                 </select>
-                <label asp-for="ClubCategory" class="form-label">Category</label>
-                <span asp-validation-for="ClubCategory" class="text-danger"></span>
+                <label asp-for="MeetingCategory" class="form-label">Category</label>
+                <span asp-validation-for="MeetingCategory" class="text-danger"></span>
               </div>
 
               <div class="form-outline mb-4">
@@ -68,3 +68,6 @@
         </div>
       </div>
     </div>
+
+
+
