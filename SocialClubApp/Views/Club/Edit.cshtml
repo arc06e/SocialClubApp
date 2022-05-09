@@ -1,8 +1,8 @@
 ﻿@using SocialClubApp.DAL.Enum
 @using SocialClubApp.ViewModels
-@model CreateClubViewModel
+@model EditClubViewModel
 
-    <div class="container h-100">
+<div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -11,10 +11,10 @@
 
             <div class="card-body p-5">
 
-              <h2 class="text-center mb-5">Create Club</h2>
+              <h2 class="text-center mb-5">Edit Club</h2>
 
-              <form method="post" enctype="multipart/form-data">
-               <input type="hidden" id="AppUserId" name="AppUserId" asp-for="AppUserId" />
+              <form method="post" asp-action="Edit" enctype="multipart/form-data">
+               <input type="hidden" id="Id" name="Id" asp-for="Id" />
                 <div asp-validation-summary="All" class="text-danger"></div>
                  <div class="form-outline mb-4">
                    <input asp-for="Title"class="form-control form-control-lg" />
@@ -68,3 +68,12 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+

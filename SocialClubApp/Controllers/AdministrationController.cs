@@ -420,7 +420,7 @@ namespace SocialClubApp.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "DeleteRolePolicy")]
+        [Authorize(Policy = "DeleteMeetingPolicy")]
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await _roleManager.FindByIdAsync(id);

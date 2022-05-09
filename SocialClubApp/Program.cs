@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SocialClubApp.DAL;
+using SocialClubApp.Helpers;
 using SocialClubApp.Interfaces;
 using SocialClubApp.Models;
 using SocialClubApp.Repositories;
+using SocialClubApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IClubRepository, ClubRepository>();
-
+builder.Services.AddScoped<IMeetingRepository, MeetingRepository>();
+builder.Services.AddScoped<IPhotoService, PhotoService>();
+builder.Services.Configure<CloudinarySettings>(
+    builder.Configuration.GetSection("CloudinarySettings"));
 //registers dependency with dependency injection container
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
 {
@@ -28,6 +33,10 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("DeleteRolePolicy",
         policy => policy.RequireClaim("Delete Role"));
+    options.AddPolicy("DeleteClubPolicy",
+        policy => policy.RequireClaim("Delete Club"));
+    options.AddPolicy("DeleteMeetingPolicy",
+        policy => policy.RequireClaim("Delete Meeting"));
 });
 
 

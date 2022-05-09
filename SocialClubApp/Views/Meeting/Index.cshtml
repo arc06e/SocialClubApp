@@ -1,16 +1,15 @@
-﻿@model IEnumerable<Club>
+﻿@model IEnumerable<Meeting>
 
 
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
     
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="display-5 fw-bold">ClubHouse</h1> 
+        <h1 class="display-5 fw-bold">Events</h1> 
        
-            <p class="lead text-muted">Don't see a club that matches your interests? Create your own and 
-                cultivate a space for fellow enthusiasts like yourself!</p>
+            <p class="lead text-muted">Don't see a event for your club? Create your own!</p>
         <p>
-          <a class="btn btn-primary my-2" asp-controller="Club" asp-action="Create">Add Club</a>
+          <a class="btn btn-primary my-2" asp-controller="Meeting" asp-action="Create">Add Club</a>
         </p>
         
       </div>
@@ -39,13 +38,13 @@
                        <p class="card-text">@item.Description</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <a type="btn btn-success" asp-controller="Club" asp-action="Details" asp-route-id="@item.Id"
+                          <a type="btn btn-success" asp-controller="Meeting" asp-action="Details" asp-route-id="@item.Id"
                                         class="btn btn-sm btn-outline-secondary">View</a>
-                          <a asp-controller="Club" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
-                          <a asp-controller="Club" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Delete</a>
+                          <a asp-controller="Meeting" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
+                          <a asp-controller="Meeting" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Delete</a>
                           
                         </div>
-                        <small class="text-muted">@item.ClubCategory</small>
+                        <small class="text-muted">@item.MeetingCategory</small>
                       </div>
                     </div>
                   </div>

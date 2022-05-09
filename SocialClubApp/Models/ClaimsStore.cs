@@ -8,7 +8,9 @@ namespace SocialClubApp.Models
         {            //claim type   //claim value 
             new Claim("Create Role", "Create Role"),
             new Claim("Edit Role", "Edit Role"),
-            new Claim("Delete Role", "Delete Role")
+            new Claim("Delete Role", "Delete Role"),
+            new Claim("Delete Club", "Delete Club"),
+            new Claim("Delete Meeting", "Delete Meeting")
         };
     }
 }
