@@ -11,21 +11,21 @@ Welcome to the ClubHouse! I built this MVC ASP.NET Core app in .NET 6 in order t
 ## Current Features
 * Seeds database with sample data to demonstrate app's key features.
 * Identity membership system:
-  * Allows you to manage users, roles, and claims
+  * Allows you to manage users, roles, and claims.
     * Utilizes role-and-claim-based authorization to determine which users can access which pages and alter db data.    
 * CRUD functionality:
-  * Allows users with appropriate authorization to create, read, update, and delete social and events. 
+  * Allows users with appropriate authorization to create, read, update, and delete clubs and events. 
   * Allows users with appropriate authorization to create, read, update, and delete  users, claims, and roles.
-* PLeasant UI experience:
-  * Easy-to-read and clearly defined web pages to help users navigate the application and use its 
+* Pleasant UI experience:
+  * Easy-to-read and clearly defined web pages to help users navigate the application and use its intended features.
   * Utilizes model validation to ensure users receive detailed feedback to promptly resolve any user input errors or other unintended disruptions.
 * Repository Design Pattern:
-  * Separates the database access code from the controller actions methods in order to implement more loosely-coupled code and reduce code duplication.   
+  * Separates the database access code from the controller action methods in order to implement more loosely-coupled code and reduce code duplication.   
 
 
 ## Intended Improvements
 
-Going forward, I would like to incorporate geolocation features that tailor results presented to the user according to their general area. I would also like to include search functionality for the user's convenience. Another major feature I would like to add is form of commenting system whereby established members can comment on the various clubs and events in order to track updates and other pertinent details. 
+Going forward, I would like to incorporate geolocation features that tailor results presented to the user according to their general area. I would also like to include search functionality for the user's convenience. Another major feature I would like to add is a commenting system whereby authenicated members can comment on the various clubs and events in order to track updates and other pertinent details. 
 
 
 ![ClubHouseHomepage](https://user-images.githubusercontent.com/91097715/167471401-5dd897b3-23c0-4948-81b8-c46b97bf5178.JPG)
