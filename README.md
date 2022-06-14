@@ -1,4 +1,4 @@
-# SocialClubApp
+# SocialClubApp-ASP.NETCore-MVC-With-EFCore
 
 ## The Clubhouse
 See it up and running: https://socialclubapp.azurewebsites.net/
