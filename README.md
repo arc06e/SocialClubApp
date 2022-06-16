@@ -6,21 +6,31 @@ See it up and running: https://socialclubapp.azurewebsites.net/
 
 ## Description
 
-Welcome to the ClubHouse! I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself with ASP.NET Core's Identity Framework. It is a web app that allows users to create and manage social clubs and events in their area devoted to their shared interests. Through designing and building this app, I was able to learn about key features of the Identity Framework--such as authentication and authorization--and the ways in which you can restrict user access to parts of the app through assigning roles and claims in order to create a more secure app.
+Welcome to The ClubHouse - an online platform for bringing people together. Whether it's connecting with people in your local community or online, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
+
+## Origin
+
+I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself with ASP.NET Core's Identity Framework. It is a web app that allows users to create and manage social clubs and events in their area devoted to their shared interests. Through designing and building this app, I was able to learn about key features of the Identity Framework--such as authentication and authorization--and the ways in which you can restrict user access to parts of the app through assigning roles and claims in order to create a more secure app.
 
 ## Current Features
-* Seeds database with sample data to demonstrate app's key features.
-* Identity membership system:
-  * Allows you to manage users, roles, and claims.
-    * Utilizes role-and-claim-based authorization to determine which users can access which pages and alter db data.    
-* CRUD functionality:
-  * Allows users with appropriate authorization to create, read, update, and delete clubs and events. 
-  * Allows users with appropriate authorization to create, read, update, and delete  users, claims, and roles.
-* Pleasant UI experience:
-  * Easy-to-read and clearly defined web pages to help users navigate the application and use its intended features.
-  * Utilizes model validation to ensure users receive detailed feedback to promptly resolve any user input errors or other unintended disruptions.
-* Repository Design Pattern:
-  * Separates the database access code from the controller action methods in order to implement more loosely-coupled code and reduce code duplication.   
+* General 
+ * Allows users to create and manage an account.
+ * Ability to establish and maintain clubs.
+ * Ability to schedule and modify events. 
+ 
+* Technical 
+ * Seeds database with sample data to demonstrate app's key features.
+ * Identity membership system:
+   * Allows you to manage users, roles, and claims.
+     * Utilizes role-and-claim-based authorization to determine which users can access which pages and alter db data.    
+ * CRUD functionality:
+   * Allows users with appropriate authorization to create, read, update, and delete clubs and events. 
+   * Allows users with appropriate authorization to create, read, update, and delete  users, claims, and roles.
+ * Pleasant UI experience:
+   * Easy-to-read and clearly defined web pages to help users navigate the application and use its intended features.
+   * Utilizes model validation to ensure users receive detailed feedback to promptly resolve any user input errors or other unintended disruptions.
+ * Repository Design Pattern:
+   * Separates the database access code from the controller action methods in order to implement more loosely-coupled code and reduce code duplication.   
 
 
 ## Intended Improvements
