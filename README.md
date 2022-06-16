@@ -13,11 +13,11 @@ Welcome to The ClubHouse - an online platform for bringing people together. Whet
 I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself with ASP.NET Core's Identity Framework. Through designing and building this app, I was able to learn about key features of the Identity Framework - such as authentication and authorization - and the ways in which you can restrict user access to parts of the app through assigning roles and claims in order to create a more secure app.
 
 ## Current Features
-* General 
+* General: 
   * Allows users to create and manage an account.
   * Ability to establish and maintain clubs.
   * Ability to schedule and modify events. 
-* Technical 
+* Technical: 
  * Seeds database with sample data to demonstrate app's key features.
  * Identity membership system:
    * Allows you to manage users, roles, and claims.
