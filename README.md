@@ -14,10 +14,9 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 ## Current Features
 * General 
- * Allows users to create and manage an account.
- * Ability to establish and maintain clubs.
- * Ability to schedule and modify events. 
- 
+  * Allows users to create and manage an account.
+  * Ability to establish and maintain clubs.
+  * Ability to schedule and modify events. 
 * Technical 
  * Seeds database with sample data to demonstrate app's key features.
  * Identity membership system:
