@@ -3,7 +3,7 @@
 namespace SocialClubApp
 {
     public static class ClaimsPrincipalExtensions
-    {                                 // this - referring to claimsprinciple isntance - cf ClubController
+    {                                 // this - referring to claimsprinciple instance - cf ClubController
         public static string GetUserId(this ClaimsPrincipal user)
         {
             return user.FindFirst(ClaimTypes.NameIdentifier).Value;

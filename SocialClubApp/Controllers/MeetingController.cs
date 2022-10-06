@@ -100,7 +100,7 @@ namespace SocialClubApp.Controllers
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError(string.Empty, "Failed to edit event");
-                return View("Error", meetingVM);
+                return View(meetingVM);
             }
 
             var userClub = await _meetingRepository.GetByIdAsyncNoTracking(id);

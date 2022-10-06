@@ -31,8 +31,8 @@ namespace SocialClubApp.Services
 
                     File = new FileDescription(file.FileName, stream),
                     Transformation = new Transformation()
-                    .Height(600)
-                    .Width(900)
+                    .Height(500)
+                    .Width(800)
                     .Crop("fill")
                     .Gravity("face")
                 };
