@@ -7,6 +7,7 @@ using SocialClubApp.ViewModels;
 
 namespace SocialClubApp.Controllers
 {
+    
     public class ClubController : Controller
     {
         private readonly IClubRepository _clubRepository;
@@ -27,11 +28,14 @@ namespace SocialClubApp.Controllers
             return View(clubs);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Create() 
         {
             var currentUserId = _httpContextAccessor.HttpContext.User.GetUserId();
             var createVM = new CreateClubViewModel { AppUserId = currentUserId };
+            
+            
 
             return View(createVM);
         }
@@ -71,6 +75,7 @@ namespace SocialClubApp.Controllers
             return View(club);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Edit(int id) 
         {
@@ -99,7 +104,7 @@ namespace SocialClubApp.Controllers
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError(string.Empty, "Failed to edit club");
-                return View("Error", clubVM);
+                return View(clubVM);
             }
 
             var userClub = await _clubRepository.GetByIdAsyncNoTracking(id);
