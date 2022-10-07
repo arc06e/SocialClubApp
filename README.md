@@ -36,9 +36,9 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 Going forward, I would like to incorporate geolocation features that tailor results presented to the user according to their general area. I would also like to include search functionality for the user's convenience. Another major feature I would like to add is a commenting system whereby authenicated members can comment on the various clubs and events in order to track updates and other pertinent details. 
 
-
-![ClubHouseHomepage](https://user-images.githubusercontent.com/91097715/167471401-5dd897b3-23c0-4948-81b8-c46b97bf5178.JPG)
 <!--
+![ClubHouseHomepage](https://user-images.githubusercontent.com/91097715/167471401-5dd897b3-23c0-4948-81b8-c46b97bf5178.JPG)
+
 ![ClubHouseListUsers](https://user-images.githubusercontent.com/91097715/167471424-463dfe25-d149-4214-b7d5-c21bb1d51fc3.JPG)
 
 
