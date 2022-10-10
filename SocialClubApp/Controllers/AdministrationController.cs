@@ -8,6 +8,8 @@ using System.Security.Claims;
 
 namespace SocialClubApp.Controllers
 {
+
+    [Authorize(Policy = "AdminPolicy")]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -19,19 +21,19 @@ namespace SocialClubApp.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
-
+                
         [HttpGet]
         public IActionResult ListUsers()
         {
             var users = _userManager.Users;
             return View(users);
         }
-
+                
         [HttpGet]
         public async Task<IActionResult> ManageUserClaims(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
-
+                        
             if (user == null)
             {
                 return View("Error");
@@ -100,7 +102,7 @@ namespace SocialClubApp.Controllers
             return RedirectToAction("EditUser", new { Id = model.UserId });
 
         }
-
+                
         [HttpGet]
         public async Task<IActionResult> EditUser(string id)
         {
@@ -161,7 +163,7 @@ namespace SocialClubApp.Controllers
                 return View(model);
             }
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> DeleteUser(string id)
         {
@@ -350,7 +352,6 @@ namespace SocialClubApp.Controllers
             return RedirectToAction("EditRole", new { Id = roleId});
         }
 
-
         [HttpGet]
         public async Task<IActionResult> ManageUserRoles(string userId)
         {
@@ -419,8 +420,7 @@ namespace SocialClubApp.Controllers
             return RedirectToAction("EditUser", new { Id = userId });
         }
 
-        [HttpPost]
-        [Authorize(Policy = "DeleteMeetingPolicy")]
+        [HttpPost]        
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await _roleManager.FindByIdAsync(id);

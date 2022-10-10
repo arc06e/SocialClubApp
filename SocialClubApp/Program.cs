@@ -31,12 +31,26 @@ builder.Services.AddAuthentication();
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("DeleteRolePolicy",
-        policy => policy.RequireClaim("Delete Role"));
-    options.AddPolicy("DeleteClubPolicy",
-        policy => policy.RequireClaim("Delete Club"));
-    options.AddPolicy("DeleteMeetingPolicy",
-        policy => policy.RequireClaim("Delete Meeting"));
+    //   Roles are still available for backwards compatibility -
+    //   recommend not using Roles as claims, but rather using a claims.
+    //options.AddPolicy("RequireAdministratorRole",
+    //    policy => policy.RequireRole("Admin"));
+
+    //    A claim is a name value pair that represents what the subject is,
+    //    not what the subject can do.  
+    options.AddPolicy("AdminPolicy",
+        policy => policy.RequireClaim("Admin")
+                        .RequireClaim("Mod"));
+
+    options.AddPolicy("ModPolicy",
+        policy => policy.RequireClaim("Mod"));
+
+    //options.AddPolicy("DeleteRolePolicy",
+    //    policy => policy.RequireClaim("Delete Role"));
+    //options.AddPolicy("DeleteClubPolicy",
+    //    policy => policy.RequireClaim("Delete Club"));
+    //options.AddPolicy("DeleteMeetingPolicy",
+    //    policy => policy.RequireClaim("Delete Meeting"));
 });
 
 

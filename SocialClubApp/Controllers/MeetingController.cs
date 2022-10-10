@@ -140,7 +140,7 @@ namespace SocialClubApp.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "DeleteMeetingPolicy")]
+        [Authorize(Policy = "ModPolicy")]
         public async Task<IActionResult> Delete(int id)
         {
             var meetingDetails = await _meetingRepository.GetByIdAsync(id);
