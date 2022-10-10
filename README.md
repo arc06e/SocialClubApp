@@ -4,6 +4,9 @@
 
 See it up and running: https://socialclubapp20221006112426.azurewebsites.net/
 
+![SocialClubAppScreenshot](https://user-images.githubusercontent.com/91097715/194930843-afe597db-2e0c-4415-bca6-853e9a26130e.jpg)
+
+
 ## Description
 
 Welcome to The ClubHouse - an online platform for bringing people together. Whether it's connecting with people in your local community or online, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
@@ -18,10 +21,10 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
   * Ability to establish and maintain clubs.
   * Ability to schedule and modify events. 
 * Technical: 
- * Seeds database with sample data to demonstrate app's key features.
+<!- * Seeds database with sample data to demonstrate app's key features. -->
  * Identity membership system:
-   * Allows you to manage users, roles, and claims.
-     * Utilizes role-and-claim-based authorization to determine which users can access which pages and alter db data.    
+   * Allows you to manage users, and claims.
+     * Utilizes claim-based authorization to determine which users can access which pages and alter db data.    
  * CRUD functionality:
    * Allows users with appropriate authorization to create, read, update, and delete clubs and events. 
    * Allows users with appropriate authorization to create, read, update, and delete  users, claims, and roles.
