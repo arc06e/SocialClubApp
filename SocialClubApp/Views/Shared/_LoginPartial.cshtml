@@ -13,7 +13,7 @@ and UserManager to display user info in said links*@
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-page="">Hello @UserManager.GetUserName(User)!</a>
     </li>
-    @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+        @if (SignInManager.IsSignedIn(User) && User.HasClaim("Admin", "Admin"))
     {
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"

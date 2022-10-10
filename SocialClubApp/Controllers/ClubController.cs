@@ -68,6 +68,7 @@ namespace SocialClubApp.Controllers
             return View(clubVM);
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Details(int id) 
         {
@@ -143,8 +144,8 @@ namespace SocialClubApp.Controllers
             
         }
 
-        [HttpGet]
-        [Authorize(Policy = "DeleteClubPolicy")]
+        [Authorize(Policy = "ModPolicy")]
+        [HttpGet]        
         public async Task<IActionResult> Delete(int id)
         {
             var clubDetails = await _clubRepository.GetByIdAsync(id);
