@@ -22,7 +22,7 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 * Technical: 
 <!-- * Seeds database with sample data to demonstrate app's key features. -->
  * Identity membership system:
-   * Allows you to manage users, and claims.
+   * Allows you to manage users and claims.
      * Utilizes claim-based authorization to determine which users can access which pages and alter db data.    
  * CRUD functionality:
    * Allows users with appropriate authorization to create, read, update, and delete clubs and events. 
