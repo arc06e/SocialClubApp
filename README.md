@@ -35,10 +35,15 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 1. Clone project in local directory:<br/>
 ``` git clone arc06e/SocialClubApp-ASP.NETCore-MVC-With-EFCore ```
 2. Create local database and add connection string to DefaultConnection in appsettings.json
-3. Create free Cloudinary account (https://cloudinary.com/) and add your CloudName, ApiKey, and ApiSecret to appsettings.json 
+
+![appsettingsConnectionString](https://user-images.githubusercontent.com/91097715/195206516-5327b569-4f5f-4192-9bb9-3a5ee9f2aaf7.jpg)
 
 
-![appsettings json2](https://user-images.githubusercontent.com/91097715/195206015-50b89802-4b2a-4494-b872-3464d684c13a.jpg)
+4. Create free Cloudinary account (https://cloudinary.com/) and add your CloudName, ApiKey, and ApiSecret to appsettings.json 
+
+![appsettingsCloudinary](https://user-images.githubusercontent.com/91097715/195206524-4acfb9e7-4d45-4c19-ac42-837e3d5f74e2.jpg)
+
+<!-- ![appsettings json2](https://user-images.githubusercontent.com/91097715/195206015-50b89802-4b2a-4494-b872-3464d684c13a.jpg) -->
 
 
 <!-- 
