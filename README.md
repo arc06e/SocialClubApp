@@ -15,13 +15,6 @@ ClubHouse is an online platform for bringing people together. Whether it's conne
 I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself with ASP.NET Core's Identity Framework. Through designing and building this app, I was able to learn about key features of the Identity Framework - such as authentication and authorization - and the ways in which you can restrict user access to parts of the app through assigning roles and claims in order to create a more secure app.
 -->
 
-## App Screenshots
-
-| App Login | Clubs Homepage | Create Club | Club Details | Edit Club | Delete Club |
-| ------------- | ------------- | --- | --- | --- | --- |
-| [![ClubSignInThumb3](https://user-images.githubusercontent.com/91097715/195196601-e83edbcb-048a-400f-8a1c-d4df3b776a6f.jpg)](https://user-images.githubusercontent.com/91097715/195199438-79b7c481-1988-4557-947f-4532a6b48d34.jpg) | [![ClubHomePageThumb](https://user-images.githubusercontent.com/91097715/195196794-60892407-e7eb-441e-bd50-7b5005ecef36.jpg)](https://user-images.githubusercontent.com/91097715/195199712-698e7312-bd27-49a7-80a4-9538225f0f66.jpg) | [![CreateClubThumb](https://user-images.githubusercontent.com/91097715/195197226-e4f315f5-9650-4d08-ab1b-bfc9ae027be4.jpg)](https://user-images.githubusercontent.com/91097715/195199807-0551925a-ae8d-46ea-b125-551cc99673e5.jpg) | [![ReadClubThumb](https://user-images.githubusercontent.com/91097715/195197523-806922a1-1460-478a-be56-b36da0ae9798.jpg)](https://user-images.githubusercontent.com/91097715/195199908-1be8859b-8631-4261-8313-ecbb246e2eb1.jpg) | [![EditClubThumb](https://user-images.githubusercontent.com/91097715/195197723-1172b059-ee77-4f8f-aaf3-3e247cf9ae59.jpg)](https://user-images.githubusercontent.com/91097715/195200026-51fcee5e-fa21-4789-8596-ba7b05c921f7.jpg) | [![DeleteClubThumb](https://user-images.githubusercontent.com/91097715/195197903-f114dbd2-8782-4865-a3d7-7a5c115c1a27.jpg)](https://user-images.githubusercontent.com/91097715/195200111-bb9d9345-6d44-424e-98ee-c408b65e1f96.jpg) |
-
-
 ## Current Features
 
  * Pleasant UI experience:
@@ -36,11 +29,13 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
    * Utilizes claim-based authorization to determine which users can access which pages and alter db data.
    * Administrative features for maintaining registered user claims.   
 
-
-
 <!-- * Seeds database with sample data to demonstrate app's key features. -->
  
+## App Screenshots
 
+| App Login | Clubs Homepage | Create Club | Club Details | Edit Club | Delete Club |
+| ------------- | ------------- | --- | --- | --- | --- |
+| [![ClubSignInThumb3](https://user-images.githubusercontent.com/91097715/195196601-e83edbcb-048a-400f-8a1c-d4df3b776a6f.jpg)](https://user-images.githubusercontent.com/91097715/195199438-79b7c481-1988-4557-947f-4532a6b48d34.jpg) | [![ClubHomePageThumb](https://user-images.githubusercontent.com/91097715/195196794-60892407-e7eb-441e-bd50-7b5005ecef36.jpg)](https://user-images.githubusercontent.com/91097715/195199712-698e7312-bd27-49a7-80a4-9538225f0f66.jpg) | [![CreateClubThumb](https://user-images.githubusercontent.com/91097715/195197226-e4f315f5-9650-4d08-ab1b-bfc9ae027be4.jpg)](https://user-images.githubusercontent.com/91097715/195199807-0551925a-ae8d-46ea-b125-551cc99673e5.jpg) | [![ReadClubThumb](https://user-images.githubusercontent.com/91097715/195197523-806922a1-1460-478a-be56-b36da0ae9798.jpg)](https://user-images.githubusercontent.com/91097715/195199908-1be8859b-8631-4261-8313-ecbb246e2eb1.jpg) | [![EditClubThumb](https://user-images.githubusercontent.com/91097715/195197723-1172b059-ee77-4f8f-aaf3-3e247cf9ae59.jpg)](https://user-images.githubusercontent.com/91097715/195200026-51fcee5e-fa21-4789-8596-ba7b05c921f7.jpg) | [![DeleteClubThumb](https://user-images.githubusercontent.com/91097715/195197903-f114dbd2-8782-4865-a3d7-7a5c115c1a27.jpg)](https://user-images.githubusercontent.com/91097715/195200111-bb9d9345-6d44-424e-98ee-c408b65e1f96.jpg) |
 
 
 ## Intended Improvements
