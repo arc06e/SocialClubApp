@@ -1,18 +1,27 @@
 # SocialClubApp-ASP.NETCore-MVC-With-EFCore
 
-## The Clubhouse
+## Clubhouse
 See it up and running: https://socialclubapp20221006112426.azurewebsites.net/
 
 ## Description
 
-Welcome to The ClubHouse - an online platform for bringing people together. Whether it's connecting with people in your local community or online, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
+ClubHouse is an online platform for bringing people together. Whether it's connecting with people in your local community or online, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
 
 ![SocialClubAppScreenshotResize2](https://user-images.githubusercontent.com/91097715/195120960-f829ab91-f348-4332-8ad7-e87fa7ad5041.jpg)
 
-
+<!--
 ## Origin
 
 I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself with ASP.NET Core's Identity Framework. Through designing and building this app, I was able to learn about key features of the Identity Framework - such as authentication and authorization - and the ways in which you can restrict user access to parts of the app through assigning roles and claims in order to create a more secure app.
+-->
+
+
+## App Screenshots
+
+| App Login | Clubs Homepage | Create Club | Club Details | Edit Club | Delete Club |
+| ------------- | ------------- | --- | --- | --- | --- |
+| ![ClubSignInThumb](https://user-images.githubusercontent.com/91097715/195195809-7f59890c-7094-499d-aed8-d1a402bf6b0b.jpg)  | ![ClubSignInThumb](https://user-images.githubusercontent.com/91097715/195195809-7f59890c-7094-499d-aed8-d1a402bf6b0b.jpg)  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
 
 ## Current Features
 * General: 
