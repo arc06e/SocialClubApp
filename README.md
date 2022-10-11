@@ -27,7 +27,7 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
  * Authentication and Authorization (ASP.NET Core Identity):
    * Authenticates users to determine authorization status.
    * Utilizes claim-based authorization to determine which users can access which pages and alter db data.
-   * Administrative features for maintaining registered user claims.   
+   * Administrative features for maintaining distribution of registered user claims.   
 
 <!-- * Seeds database with sample data to demonstrate app's key features. -->
  
