@@ -41,7 +41,7 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 4. Create free Cloudinary account (https://cloudinary.com/) and add your CloudName, ApiKey, and ApiSecret to appsettings.json 
 
-![appsettingsCloudinary3](https://user-images.githubusercontent.com/91097715/195206909-efefac73-ee19-4125-aca6-2d1169d8cbd2.jpg)
+![appsettingsCloudinary4](https://user-images.githubusercontent.com/91097715/195207067-51977ff9-bdcd-41f5-9b04-c927be7a264c.jpg)
 
 
 <!-- ![appsettings json2](https://user-images.githubusercontent.com/91097715/195206015-50b89802-4b2a-4494-b872-3464d684c13a.jpg) -->
