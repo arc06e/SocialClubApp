@@ -20,7 +20,9 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 | App Login | Clubs Homepage | Create Club | Club Details | Edit Club | Delete Club |
 | ------------- | ------------- | --- | --- | --- | --- |
-| ![ClubSignInThumb](https://user-images.githubusercontent.com/91097715/195195809-7f59890c-7094-499d-aed8-d1a402bf6b0b.jpg)  | ![ClubSignInThumb](https://user-images.githubusercontent.com/91097715/195195809-7f59890c-7094-499d-aed8-d1a402bf6b0b.jpg)  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| 
+![ClubSignInThumb2](https://user-images.githubusercontent.com/91097715/195196227-085a1e3e-1ff3-4444-bff6-fdd64a699cce.jpg)  | 
+![ClubSignInThumb2](https://user-images.githubusercontent.com/91097715/195196227-085a1e3e-1ff3-4444-bff6-fdd64a699cce.jpg) | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
 
 
 ## Current Features
