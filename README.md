@@ -7,8 +7,8 @@ See it up and running: https://socialclubapp20221006112426.azurewebsites.net/
 
 Welcome to The ClubHouse - an online platform for bringing people together. Whether it's connecting with people in your local community or online, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
 
+![SocialClubAppScreenshotResize](https://user-images.githubusercontent.com/91097715/195120544-98aa09d6-da0a-4295-a3f1-ffd89dbdf5e5.jpg)
 
-![SocialClubAppScreenshot](https://user-images.githubusercontent.com/91097715/194930843-afe597db-2e0c-4415-bca6-853e9a26130e.jpg)
 
 ## Origin
 
