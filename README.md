@@ -30,6 +30,13 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
    * Administrative features for maintaining distribution of registered user claims.   
 
 <!-- * Seeds database with sample data to demonstrate app's key features. -->
+
+<!-- 
+NEED SECTION ON HOW TO CLONE/FORK APP, CONFIGURE DB, CLOUDINARY, ETC
+1. CLONE/FORK
+2. SET UP LOCAL DB/ADD CONNECTION STRING TO APPSETTINGS
+3. CREATE CLOUDINARY ACCOUNT
+-->
  
 ## App Screenshots
 
