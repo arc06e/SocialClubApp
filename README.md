@@ -5,7 +5,7 @@ See it up and running: https://socialclubapp20221006112426.azurewebsites.net/
 
 ## Description
 
-ClubHouse is an online platform for bringing people together. Whether it's connecting with people in your local community or beyond, The ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
+ClubHouse is an online platform for bringing people together. Whether it's connecting with people in your local community or beyond, ClubHouse provides a simple, easy-to-use interface for scheduling events or establishing clubs with people who share your interests or hobbies.
 
 ![SocialClubAppScreenshotResize2](https://user-images.githubusercontent.com/91097715/195120960-f829ab91-f348-4332-8ad7-e87fa7ad5041.jpg)
 
