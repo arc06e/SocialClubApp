@@ -36,8 +36,8 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 ``` git clone arc06e/SocialClubApp-ASP.NETCore-MVC-With-EFCore ```
 2. Create local database and add connection string to DefaultConnection in appsettings.json
 3. Create free Cloudinary account (https://cloudinary.com/) and add your CloudName, ApiKey, and ApiSecret to appsettings.json 
--- For Reference -- 
-![appsettings json](https://user-images.githubusercontent.com/91097715/195205811-8f68b19a-09e1-4b2d-8366-5761c4572451.jpg)
+![appsettings json2](https://user-images.githubusercontent.com/91097715/195206015-50b89802-4b2a-4494-b872-3464d684c13a.jpg)
+
 
 <!-- 
 NEED SECTION ON HOW TO CLONE/FORK APP, CONFIGURE DB, CLOUDINARY, ETC
