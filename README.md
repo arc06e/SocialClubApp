@@ -17,7 +17,10 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 
 
+[![sample screenshot](https://i.imgur.com/Tkks00R.png)](https://i.imgur.com/Ob4qAwu.png)
 
+
+![ClubSignIn]()
 
 
 
@@ -25,7 +28,7 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 | App Login | Clubs Homepage | Create Club | Club Details | Edit Club | Delete Club |
 | ------------- | ------------- | --- | --- | --- | --- |
-| ![ClubSignInThumb3](https://user-images.githubusercontent.com/91097715/195196601-e83edbcb-048a-400f-8a1c-d4df3b776a6f.jpg) | ![ClubHomePageThumb](https://user-images.githubusercontent.com/91097715/195196794-60892407-e7eb-441e-bd50-7b5005ecef36.jpg) | ![CreateClubThumb](https://user-images.githubusercontent.com/91097715/195197226-e4f315f5-9650-4d08-ab1b-bfc9ae027be4.jpg) | ![ReadClubThumb](https://user-images.githubusercontent.com/91097715/195197523-806922a1-1460-478a-be56-b36da0ae9798.jpg) | ![EditClubThumb](https://user-images.githubusercontent.com/91097715/195197723-1172b059-ee77-4f8f-aaf3-3e247cf9ae59.jpg) | ![DeleteClubThumb](https://user-images.githubusercontent.com/91097715/195197903-f114dbd2-8782-4865-a3d7-7a5c115c1a27.jpg) |
+| [![ClubSignInThumb3](https://user-images.githubusercontent.com/91097715/195196601-e83edbcb-048a-400f-8a1c-d4df3b776a6f.jpg)](https://user-images.githubusercontent.com/91097715/195198450-acef16db-5b99-4a0c-98b1-b96cdd891a81.jpg) | ![ClubHomePageThumb](https://user-images.githubusercontent.com/91097715/195196794-60892407-e7eb-441e-bd50-7b5005ecef36.jpg) | ![CreateClubThumb](https://user-images.githubusercontent.com/91097715/195197226-e4f315f5-9650-4d08-ab1b-bfc9ae027be4.jpg) | ![ReadClubThumb](https://user-images.githubusercontent.com/91097715/195197523-806922a1-1460-478a-be56-b36da0ae9798.jpg) | ![EditClubThumb](https://user-images.githubusercontent.com/91097715/195197723-1172b059-ee77-4f8f-aaf3-3e247cf9ae59.jpg) | ![DeleteClubThumb](https://user-images.githubusercontent.com/91097715/195197903-f114dbd2-8782-4865-a3d7-7a5c115c1a27.jpg) |
 
 
 ## Current Features
