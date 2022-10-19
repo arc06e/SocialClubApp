@@ -80,15 +80,9 @@ namespace SocialClubApp.Repositories
 
         public async Task<List<AppUser>> GetClubMembers(int clubId)
         {
-            //return await _context.Users.Include(u => u.UserClubs).Where(c => c.UserClubs.Contains(uc => uc.)).ToListAsync();
-
-            // return await _context.UserClubs.Where(uc => uc.ClubId == clubId).ToListAsync();
 
             return await _context.UserClubs.Where(uc => uc.ClubId == clubId).Select(a => a.User).ToListAsync();
 
-            //think about this - 
-            // 1) select club (cf 1)
-            // 2) get list of userClubs associated with select club 
         }
 
 
