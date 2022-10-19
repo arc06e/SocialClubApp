@@ -237,16 +237,6 @@ namespace SocialClubApp.Controllers
 
             var link = new UserClub { Club = club, ClubId = club.Id, User = user, UserId = user.Id };
 
-            //From version 7.0, C# introduced a new feature called discards to create dummy variables,
-            //defined by the underscore character _. Discards are equal to unassigned variables.
-            //The purpose of this feature is to use this variable when you want to intentionally
-            //skip the value by not creating a variable explicitly.
-            //_ = clubViewModel.IsJoined switch            
-            //{
-            //    true => _clubRepository.QuitClub(link),
-            //    false => _clubRepository.JoinClub(link),
-            //};
-
             if (clubViewModel.IsJoined)
             {
                 _clubRepository.QuitClub(link);
