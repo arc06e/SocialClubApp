@@ -4,9 +4,8 @@ namespace SocialClubApp.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Required]        
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

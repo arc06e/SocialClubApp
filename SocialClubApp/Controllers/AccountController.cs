@@ -39,7 +39,7 @@ namespace SocialClubApp.Controllers
             {
                 var user = new AppUser()
                 {
-                    UserName = registerVM.Email,
+                    UserName = registerVM.UserName,
                     Email = registerVM.Email
                 };
 
@@ -80,7 +80,8 @@ namespace SocialClubApp.Controllers
         {
             if (ModelState.IsValid) 
             {
-                var result = await _signInManager.PasswordSignInAsync(loginVM.Email,
+
+                var result = await _signInManager.PasswordSignInAsync(loginVM.UserName,
                     loginVM.Password, loginVM.RememberMe, false);
                 if (result.Succeeded)
                 {
@@ -113,6 +114,11 @@ namespace SocialClubApp.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Club");
+        }
+
+        public IActionResult ForgotPassword() 
+        {
+            return View();
         }
 
     }

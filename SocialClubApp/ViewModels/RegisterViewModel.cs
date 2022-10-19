@@ -8,6 +8,11 @@ namespace SocialClubApp.ViewModels
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(25)]
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

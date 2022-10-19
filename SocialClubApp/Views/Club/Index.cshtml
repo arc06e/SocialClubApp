@@ -15,7 +15,7 @@
        
                                 <p class="lead text-muted">Don't see a club that matches your interests? Create your own! </p>                                
                             <p>
-                              <a class="btn btn-primary my-2" asp-controller="Club" asp-action="Create">Add Club</a>
+                              <a class="btn btn-primary" asp-controller="Club" asp-action="Create">Add Club</a>
                             </p>
         
                           </div>
@@ -34,9 +34,9 @@
    <div class="album py-5 bg-light rounded-3 shadow-lg">
         <div class="container px-5">
           <div class="row">
-            @if (Model == null)
+            @if (Model.Count() == 0)
             {
-               <h1 class="fw-light text-center container">No Clubs</h1>
+               <h1 class="fw-light text-center container">No Clubs Created</h1>
             }
             else
             {
@@ -44,16 +44,17 @@
                 {
                   <div class="col-md-4">
                    <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@item.Image" @*width="100" height="225"*@ alt="Card image cap">
+                    <img class="card-img-top" src="@item.Image" alt="Card image cap">
                     <div class="card-body rounded-3 shadow-lg">
                       <p class="card-text">@item.Title</p>
                        <p class="card-text">@item.Description</p>
                       <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <a type="btn btn-success" asp-controller="Club" asp-action="Details" asp-route-id="@item.Id"
-                                        class="btn btn-sm btn-outline-secondary">View</a>
-                          <a asp-controller="Club" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Edit</a>
-                          <a asp-controller="Club" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">Delete</a>
+                        <div class="justify-content-between">
+                          <a asp-action="Details" asp-route-id="@item.Id" ><i class="fa-solid fa-magnifying-glass px-2"></i></a>
+
+                                        <a asp-controller="Club" asp-action="Edit" asp-route-id="@item.Id" class="text-success"><i class="fa-solid fa-pen px-2"></i></a>
+
+                                        <a asp-controller="Club" asp-action="Delete" asp-route-id="@item.Id" class="text-danger"><i class="fas fa-trash-alt px-2"></i></a>
                           
                         </div>
                         <small class="text-muted">@item.ClubCategory</small>

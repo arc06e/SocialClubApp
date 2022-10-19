@@ -14,9 +14,16 @@
 
               <form method="post">
                <div asp-validation-summary="All" class="text-danger"></div>
+
+               <div class="form-outline mb-4">
+                  <input asp-for="UserName" class="form-control form-control-lg" />
+                  <label asp-for="UserName" class="form-label">Username</label>
+                  @*<span asp-validation-for="Email" class="text-danger"></span>*@
+                </div>
+
                 <div class="form-outline mb-4">
                   <input asp-for="Email" class="form-control form-control-lg" />
-                  <label asp-for="Email" class="form-label">Your Email</label>
+                  <label asp-for="Email" class="form-label">Email</label>
                   @*<span asp-validation-for="Email" class="text-danger"></span>*@
                 </div>
 
