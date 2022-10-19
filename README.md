@@ -9,9 +9,10 @@ ClubHouse is an online platform for bringing people together. Whether it's conne
 
 <!-- ![SocialClubAppScreenshotResize2](https://user-images.githubusercontent.com/91097715/195120960-f829ab91-f348-4332-8ad7-e87fa7ad5041.jpg) -->
 
-![AppHomePageHalfSize](https://user-images.githubusercontent.com/91097715/196818020-8935041e-7fac-4e4e-b73f-0050714b761e.jpg)
 
+![AppHomePageQuarterSize](https://user-images.githubusercontent.com/91097715/196818183-fccad413-00e0-47e8-bc1d-7ce4820446b8.jpg)
 <!--
+
 
 ## Origin
 
