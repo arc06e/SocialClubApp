@@ -61,13 +61,6 @@ NEED SECTION ON HOW TO CLONE/FORK APP, CONFIGURE DB, CLOUDINARY, ETC
  
 
 
-![ManageUsers]()
-
-
-
-
-
-
 
 ## App Screenshots
 
