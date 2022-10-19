@@ -1,4 +1,5 @@
-﻿using SocialClubApp.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SocialClubApp.Models;
 
 namespace SocialClubApp.Interfaces
 {
@@ -13,5 +14,13 @@ namespace SocialClubApp.Interfaces
         bool Update(Club club);
         bool Delete(Club club);
         bool Save();
+
+        //tinkering with joining club
+        public bool JoinClub(UserClub link);
+        public bool QuitClub(UserClub link);
+        public Task<bool> IsClubJoinedAsync(int clubId, string userId);
+
+        public Task<List<AppUser>> GetClubMembers(int clubId);
+
     }
 }

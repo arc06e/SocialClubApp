@@ -1,4 +1,8 @@
-﻿@model Club
+﻿@using Microsoft.AspNetCore.Identity
+@using SocialClubApp.ViewModels
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@model ClubViewModel
 
     <div class="container py-5">
         <div class="row justify-content-center">
@@ -26,6 +30,23 @@
                     <div class="d-flex justify-content-center text-left text-muted mt-4">
                         <span>@Model.Description</span>
                     </div>
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <form method="post" asp-action="JoinClub">
+                            <input asp-for="Id" type="number" hidden />
+                            @if (Model.IsJoined)
+                            {
+                                <button type="submit" class="btn btn-primary btn-lg">Joined</button>
+                                <input asp-for="IsJoined" type="checkbox" checked hidden />
+                            }
+                            else
+                            {
+                                <button type="submit" class="btn btn-outline-primary btn-lg">Join Club</button>
+                                <input asp-for="IsJoined" type="checkbox" hidden />
+                            }
+                        </form>
+                    </div>
+
                 </div>
             </div>
             </div>
@@ -33,6 +54,49 @@
     </div>
 
 
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-xl-10">
 
+                <div class="card shadow-lg">                    
+                    <div class="card-body">
 
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Club Member</th>
+                                    <th scope="col">Member Since</th>
+                                    <th scope="col">Status</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var user in Model.Members)
+                            {
+                                <tr class="fw-normal">
+                                    <th>                                        
+                                        <img src="@user.ProfileImageUrl"
+                                         class="shadow-1-strong rounded-circle" alt="avatar 1"
+                                         style="width: 55px; height: auto;">
+                                        <span class="ms-2">@user.UserName</span>
+                                    </th>
+                                    <td class="align-middle">
+                                        <span>@user.Joined</span>
+                                    </td>
+                                    <td class="align-middle">                                   
+                                        @foreach (var claim in user.Claims)
+                                        {
+                                            <h6 class="mb-0"><span class="badge bg-danger">@claim</span></h6>
+                                        }
+                                    </td>
 
+                                </tr>
+                            }                                                           
+                            </tbody>
+                        </table>
+                    </div>                  
+                </div>
+
+            </div>
+        </div>
+    </div>

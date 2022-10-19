@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SocialClubApp.Interfaces;
 using SocialClubApp.Models;
 
 using SocialClubApp.ViewModels;
+using System.Diagnostics.Metrics;
 
 namespace SocialClubApp.Controllers
 {
@@ -13,13 +15,15 @@ namespace SocialClubApp.Controllers
         private readonly IClubRepository _clubRepository;
         private readonly IPhotoService _photoService;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly UserManager<AppUser> _userManager;
 
         public ClubController(IClubRepository clubRepository, IPhotoService photoService,
-            IHttpContextAccessor httpContextAccessor)
+            IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager)
         {
             _clubRepository = clubRepository;
             _photoService = photoService;
             _httpContextAccessor = httpContextAccessor;
+            _userManager = userManager;
         }
 
         public async Task<IActionResult> Index()
@@ -73,7 +77,56 @@ namespace SocialClubApp.Controllers
         public async Task<IActionResult> Details(int id) 
         {
             Club club = await _clubRepository.GetByIdAsync(id);
-            return View(club);
+            AppUser user = await _userManager.GetUserAsync(User);
+            var isClubJoined = await _clubRepository.IsClubJoinedAsync(club.Id, user.Id);
+            var clubMembers = await _clubRepository.GetClubMembers(id);
+
+            var clubMemberListVM = new List<ClubMemberViewModel>();
+
+            
+            foreach (var clubMember in clubMembers) 
+            {
+                var userClaims = await _userManager.GetClaimsAsync(clubMember);
+                var memberClaims = userClaims.Select(c => c.Value).ToList();
+                var memberList = new List<string>();
+
+                var clubMemberVM = new ClubMemberViewModel();
+                {
+                    clubMemberVM.Id = clubMember.Id;
+                    clubMemberVM.UserName = clubMember.UserName;
+                    clubMemberVM.Email = clubMember.Email;
+                    clubMemberVM.City = clubMember.City;
+                    clubMemberVM.State = clubMember.State;                    
+                    clubMemberVM.ProfileImageUrl = clubMember.ProfileImageUrl;
+                    clubMemberVM.Joined = clubMember.Joined;
+                    clubMemberVM.Claims = memberList;
+
+                    memberList.AddRange(memberClaims);
+
+                    // will not copy your object,
+                    // because Objects are passed by reference
+                    // this is why we initialize the object INSIDE the foreach loop
+                    clubMemberListVM.Add(clubMemberVM);
+                }
+            }
+                        
+            var clubVM = new ClubViewModel
+            {
+                Id = club.Id,
+                Image = club.Image,
+                Title = club.Title,
+                City = club.City,
+                State = club.State,
+                ClubCategory = club.ClubCategory,
+                Description = club.Description,
+                AppUserId = club.AppUserId,
+                IsJoined = isClubJoined,
+                //ClubMembers = clubMembers,
+                Members = clubMemberListVM
+               
+            };
+
+            return View(clubVM);
         }
 
         [Authorize]
@@ -168,6 +221,42 @@ namespace SocialClubApp.Controllers
 
             _clubRepository.Delete(clubDetails);
             return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> JoinClub(ClubViewModel clubViewModel)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var club = await _clubRepository.GetByIdAsync(clubViewModel.Id);
+
+            if (user == null || club == null) 
+            {
+                return NotFound();
+            }            
+
+            var link = new UserClub { Club = club, ClubId = club.Id, User = user, UserId = user.Id };
+
+            //From version 7.0, C# introduced a new feature called discards to create dummy variables,
+            //defined by the underscore character _. Discards are equal to unassigned variables.
+            //The purpose of this feature is to use this variable when you want to intentionally
+            //skip the value by not creating a variable explicitly.
+            //_ = clubViewModel.IsJoined switch            
+            //{
+            //    true => _clubRepository.QuitClub(link),
+            //    false => _clubRepository.JoinClub(link),
+            //};
+
+            if (clubViewModel.IsJoined)
+            {
+                _clubRepository.QuitClub(link);
+            }
+            else 
+            {
+                _clubRepository.JoinClub(link);
+            }
+
+            return RedirectToAction("Details", new { id = club.Id});
         }
     }
 }
