@@ -1,10 +1,6 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
     
-    <!-- Custom styles for this template -->
-    <link href="heroes.css" rel="stylesheet">
-
-    
-
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="card shadow-lg w-75">
@@ -17,11 +13,14 @@
                   <div class="col-lg-6">
                     @*<h1 class="display-5 fw-bold lh-1 mb-3">Welcome to ClubHouse</h1>*@
                     <p class="lead">Join a club to connect with people who appreciate the same things you do, or create a club to bring together people who share your interests.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                      <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4 me-md-2">Sign In</a>
-                      <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary btn-lg px-4">Sign Up</a>
+                    @if (!SignInManager.IsSignedIn(User))
+                        {
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg px-4 me-md-2">Sign In</a>
+                                <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary btn-lg px-4">Sign Up</a>
+                            </div>
+                        }
                     </div>
-                  </div>
             </div>
           </div>
         </div>

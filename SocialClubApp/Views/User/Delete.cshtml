@@ -1,0 +1,28 @@
+﻿@using SocialClubApp.DAL.Enum
+@model AppUser
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-4">
+            <div class="card text-black shadow-lg">              
+                <div class="card-body rounded-3">
+                    <form method="post" asp-action="Delete" enctype="multipart/form-data">
+                        <div class="text-center">
+                            <h1 class="card-title">Are you sure you want to delete your account?</h1>
+                         
+                        </div>
+                       
+                    </form>
+                    <div class="d-flex justify-content-center">
+                        <form action="Delete" method="post">
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Delete" class="btn btn-block text-body btn-lg btn-danger float-right mt-3" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

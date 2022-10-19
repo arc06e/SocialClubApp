@@ -57,5 +57,40 @@ namespace SocialClubApp.Repositories
             _context.Update(club);
             return Save();
         }
+
+
+        //tinkering with joining club
+        public bool JoinClub(UserClub link)
+        {
+            _context.Add(link);
+            return Save();
+        }
+
+        public bool QuitClub(UserClub link)
+        {
+            _context.Remove(link);
+            return Save();
+        }
+
+        public Task<bool> IsClubJoinedAsync(int clubId, string userId)
+        {
+            return _context.UserClubs.AnyAsync(x => x.ClubId == clubId && x.UserId == userId);
+        }
+
+
+        public async Task<List<AppUser>> GetClubMembers(int clubId)
+        {
+            //return await _context.Users.Include(u => u.UserClubs).Where(c => c.UserClubs.Contains(uc => uc.)).ToListAsync();
+
+            // return await _context.UserClubs.Where(uc => uc.ClubId == clubId).ToListAsync();
+
+            return await _context.UserClubs.Where(uc => uc.ClubId == clubId).Select(a => a.User).ToListAsync();
+
+            //think about this - 
+            // 1) select club (cf 1)
+            // 2) get list of userClubs associated with select club 
+        }
+
+
     }
 }
