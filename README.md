@@ -61,12 +61,15 @@ NEED SECTION ON HOW TO CLONE/FORK APP, CONFIGURE DB, CLOUDINARY, ETC
 
 
 
- 
+
+
+
+
 ## App Screenshots
 
 | App Login | List Clubs | Create Event | Club Details | Manage Users | Delete Event |
 | ------------- | ------------- | --- | --- | --- | --- |
-| [![ClubSignIn4Thumb](https://user-images.githubusercontent.com/91097715/196816616-af8442d0-c5c9-444d-a03e-5bd4b2b72ec6.jpg)](https://user-images.githubusercontent.com/91097715/196816137-84e5788c-9f54-40ca-92f1-fc48ef85c1b7.jpg) | [![ClubHomePage3Thumb](https://user-images.githubusercontent.com/91097715/196816746-283da717-53ce-48fe-b0d9-003f7705a18f.jpg)](https://user-images.githubusercontent.com/91097715/196776587-ee3ae7c7-30cd-4626-a4ac-32f91bec0bf7.jpg) | [![CreateClubThumb](https://user-images.githubusercontent.com/91097715/195197226-e4f315f5-9650-4d08-ab1b-bfc9ae027be4.jpg)](https://user-images.githubusercontent.com/91097715/196814987-aa3cf860-53ab-44db-b862-50f192fc318a.jpg) | [![ReadClubThumb](https://user-images.githubusercontent.com/91097715/195197523-806922a1-1460-478a-be56-b36da0ae9798.jpg)](https://user-images.githubusercontent.com/91097715/196813750-8cf21289-cb16-4398-bc54-75f1d163d830.jpg) | [![EditClubThumb](https://user-images.githubusercontent.com/91097715/195197723-1172b059-ee77-4f8f-aaf3-3e247cf9ae59.jpg)](https://user-images.githubusercontent.com/91097715/196814262-4789b657-bdc5-4a94-8fc7-33ccb704e9a0.jpg) | [![DeleteClubThumb](https://user-images.githubusercontent.com/91097715/195197903-f114dbd2-8782-4865-a3d7-7a5c115c1a27.jpg)](https://user-images.githubusercontent.com/91097715/196815784-80b4542c-9ade-49e6-b07f-8a3a957df41a.jpg) |
+| [![ClubSignIn4Thumb](https://user-images.githubusercontent.com/91097715/196816616-af8442d0-c5c9-444d-a03e-5bd4b2b72ec6.jpg)](https://user-images.githubusercontent.com/91097715/196816137-84e5788c-9f54-40ca-92f1-fc48ef85c1b7.jpg) | [![ClubHomePage3Thumb](https://user-images.githubusercontent.com/91097715/196816746-283da717-53ce-48fe-b0d9-003f7705a18f.jpg)](https://user-images.githubusercontent.com/91097715/196776587-ee3ae7c7-30cd-4626-a4ac-32f91bec0bf7.jpg) | [![CreateEventThumb](https://user-images.githubusercontent.com/91097715/196817389-c65e1236-a3e9-49e9-9889-b288854a796d.jpg)](https://user-images.githubusercontent.com/91097715/196814987-aa3cf860-53ab-44db-b862-50f192fc318a.jpg) | [![ClubDetailsThumb](https://user-images.githubusercontent.com/91097715/196817397-4593979a-acc1-4ed7-88a2-c2ee745af295.jpg)](https://user-images.githubusercontent.com/91097715/196813750-8cf21289-cb16-4398-bc54-75f1d163d830.jpg) | [![ManageUsersThumb2](https://user-images.githubusercontent.com/91097715/196817559-4c2d29e4-0b95-4ea3-ab96-c3809b4eb03c.jpg)](https://user-images.githubusercontent.com/91097715/196814262-4789b657-bdc5-4a94-8fc7-33ccb704e9a0.jpg) | [![DeleteEventThumb](https://user-images.githubusercontent.com/91097715/196817580-0e100c9c-8287-4ec1-b835-42e227d0fc04.jpg)](https://user-images.githubusercontent.com/91097715/196815784-80b4542c-9ade-49e6-b07f-8a3a957df41a.jpg) |
 
 
 ## Intended Improvements
