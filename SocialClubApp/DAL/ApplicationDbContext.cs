@@ -32,19 +32,9 @@ namespace SocialClubApp.DAL
             //using base.OnModelCreating statement.
 
 
-            //builder.Entity<AppUser>()
-            //    .HasMany(u => u.JoinedClubs)
-            //    .WithMany(c => c.UserMembers)
-            //    .UsingEntity<UserClub>(
-            //        x => x.HasOne(x => x.Club).WithMany().HasForeignKey(x => x.ClubId),
-            //        x => x.HasOne(x => x.User).WithMany().HasForeignKey(x => x.UserId)
-            //        );
+         
 
-            //builder.Entity<AppUser>()
-            //    .HasMany(u => u.Clubs)
-            //    .WithOne(c => c.AppUser);
-
-                        builder.Entity<UserClub>()
+            builder.Entity<UserClub>()
             .HasKey(uc => new { uc.UserId, uc.ClubId });
             builder.Entity<UserClub>()
             .HasOne(uc => uc.User)
