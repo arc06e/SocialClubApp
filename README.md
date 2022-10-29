@@ -36,7 +36,7 @@ I built this MVC ASP.NET Core app in .NET 6 in order to better acquaint myself w
 
 ## Set-Up Guide
 1. Clone project in local directory:<br/>
-``` git clone arc06e/SocialClubApp-ASP.NETCore-MVC-With-EFCore ```
+``` gh repo clone arc06e/SocialClubApp-ASP.NETCore-MVC-With-EFCore ```
 2. Create local database and add connection string to DefaultConnection in appsettings.json
 
 ![appsettingsConnectionString](https://user-images.githubusercontent.com/91097715/195206516-5327b569-4f5f-4192-9bb9-3a5ee9f2aaf7.jpg)
